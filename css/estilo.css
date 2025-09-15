@@ -1,0 +1,302 @@
+
+@font-face {
+      font-family: 'fontTextoEspecial'; 
+      src: url('../fontes/kaleagnetta/Kaleagnetta.ttf') format("truetype"); 
+    }
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* Menu topo */
+.fundoMenu {
+    background-color: #86895d;
+    padding: 20px;
+}
+
+.menuTop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+}
+
+.menuTop li {
+    list-style-type: none;
+    color: #fff;
+    font-family: "Bodoni Moda", serif;
+}
+
+/* Banner Sid e Bia */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.banner h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-family: "Bodoni Moda", serif;
+}
+
+.banner h1 span{
+    font-family: "Sacramento", cursive;
+    font-weight: normal;
+}
+
+.textoEspecial {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.textoEspecial p {
+    text-align: center;
+    line-height: 1.5;
+    font-family: fontTextoEspecial;
+    font-size: 30px;
+    color: #3b3d14;
+
+}
+
+/* Contador  dias */
+.contadorDias {
+    background-color: #eff0f0;
+    height: 300px;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.containerContadorDias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contador-container h1 {
+    font-size: 2.5rem;
+    color: #c0392b;
+    /* Vermelho do "FALTAM" */
+    margin-bottom: 40px;
+}
+
+.timers-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* Espaço entre os círculos */
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem a linha em telas menores */
+}
+
+/* --- ITEM INDIVIDUAL (CÍRCULO + NÚMERO + TEXTO) --- */
+.timer-item {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-item .number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #555;
+    line-height: 1;
+}
+
+.timer-item .label {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* --- ESTILOS DOS CÍRCULOS (SVG) --- */
+.progress-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    /* Começa o progresso no topo (posição 12h) */
+}
+
+.progress-ring__circle {
+    transition: stroke-dashoffset 0.5s;
+    transform-origin: 50% 50%;
+}
+
+/* Círculo de fundo (a trilha cinza) */
+.progress-ring__background {
+    stroke: #e6e6e6;
+}
+
+/* Cores dos círculos de progresso */
+.dias .progress-ring__foreground {
+    stroke: #272b00;
+}
+
+.horas .progress-ring__foreground {
+    stroke: #54582f;
+}
+
+.minutos .progress-ring__foreground {
+    stroke: #86895d;
+}
+
+.segundos .progress-ring__foreground {
+    stroke: #bec092;
+}
+
+
+
+
+/* Local e Data */
+.localData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+
+.localData img {
+    width: 200px;
+    height: 200px;
+
+}
+
+.fundoTxtData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
+
+.containerLocalData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.fundoTxtEnd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.3;
+}
+
+.btnLocalizacao {
+    background-color: #86895d;
+    width: 300px;
+    height: 80px;
+    margin-top: 30px;
+    border: 1px solid #86895d;
+    box-shadow: 4px 4px 4px #272b00;
+}
+
+.btnLocalizacao:hover {
+    background-color: #54582f;
+    color: #fff;
+    border: 1px solid #54582f;
+}
+
+/* Codigo vestimenta */
+.dressCode {
+    background-color: #eff0f0;
+    height: 400px;
+}
+
+.dress-code-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #3b3d14;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+
+.color-palette {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.color-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.color-circle:not(:first-child) {
+    margin-left: -45px;
+}
+
+/* Presentes */
+.presentes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+}
+
+.presentes p {
+    text-align: center;
+}
+
+.containerPresentes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.listaPresentes,
+.containerPix {
+    text-align: center;
+}
+
+.listas,
+.pix {
+    background-color: #e9e9e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 80px;
+}
+
+.rodape {
+    background-color: #272b00;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
