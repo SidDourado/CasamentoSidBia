@@ -1,3 +1,4 @@
+/* Fontes importadas */
 @font-face {
     font-family: 'fontTextoEspecial';
     src: url('../fontes/kaleagnetta/Kaleagnetta.ttf') format("truetype");
@@ -11,6 +12,11 @@
 @font-face {
     font-family: 'fontDataLocal';
     src: url('../fontes/times_sans_serif/TIMESS__.ttf');
+}
+
+@font-face {
+    font-family: 'fontChocolate';
+    src: url('../fontes/chocolate_5/Chocolate.ttf');
 }
 
 
@@ -36,6 +42,16 @@ body {
     list-style-type: none;
     color: #fff;
     font-family: "Bodoni Moda", serif;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menuTop li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menuTop li:hover {
+    transform: scale(1.2);
 }
 
 /* Banner Sid e Bia */
@@ -58,6 +74,7 @@ body {
     font-weight: normal;
 }
 
+
 .textoEspecial {
     width: 70%;
     display: flex;
@@ -69,8 +86,8 @@ body {
 .textoEspecial p {
     text-align: center;
     line-height: 1.5;
-    font-family: 'fontTextoEspecial';
-    font-size: 35px;
+    font-family: 'fontChocolate';
+    font-size: 24px;
     color: #3b3d14;
     margin: 0;
 
@@ -110,12 +127,10 @@ body {
     display: flex;
     justify-content: center;
     gap: 30px;
-    /* Espaço entre os círculos */
     flex-wrap: wrap;
-    /* Permite que os itens quebrem a linha em telas menores */
 }
 
-/* --- ITEM INDIVIDUAL (CÍRCULO + NÚMERO + TEXTO) --- */
+/*Item dos circulo (circulo - num-txto)*/
 .timer-item {
     position: relative;
     width: 130px;
@@ -139,13 +154,12 @@ body {
     margin-top: 5px;
 }
 
-/* --- ESTILOS DOS CÍRCULOS (SVG) --- */
+/*Etilos dos circulos*/
 .progress-ring {
     position: absolute;
     top: 0;
     left: 0;
     transform: rotate(-90deg);
-    /* Começa o progresso no topo (posição 12h) */
 }
 
 .progress-ring__circle {
@@ -153,12 +167,10 @@ body {
     transform-origin: 50% 50%;
 }
 
-/* Círculo de fundo (a trilha cinza) */
 .progress-ring__background {
     stroke: #e6e6e6;
 }
 
-/* Cores dos círculos de progresso */
 .dias .progress-ring__foreground {
     stroke: #272b00;
 }
@@ -176,8 +188,6 @@ body {
 }
 
 
-
-
 /* Local e Data */
 .localData {
     display: flex;
@@ -186,7 +196,6 @@ body {
     flex-direction: column;
     padding-bottom: 50px;
 }
-
 
 .localData img {
     width: 200px;
@@ -235,7 +244,7 @@ body {
     font-size: 50px;
 }
 
-.btnLocalizacao a{
+.btnLocalizacao a {
     text-decoration: none;
     color: #272b00;
 }
@@ -246,7 +255,7 @@ body {
     border: 1px solid #54582f;
 }
 
-.btnLocalizacao a:hover{
+.btnLocalizacao a:hover {
     color: #fff;
 }
 
@@ -263,7 +272,6 @@ body {
     padding: 40px;
 }
 
-
 .title {
     font-family: 'Parisienne', cursive;
     font-size: 4rem;
@@ -274,13 +282,11 @@ body {
 
 }
 
-
 .color-palette {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 .color-circle {
     width: 200px;
@@ -288,7 +294,6 @@ body {
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 .color-circle:not(:first-child) {
     margin-left: -80px;
@@ -312,15 +317,13 @@ body {
 }
 
 .txtViverMomento {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
+    font-family: 'fontChocolate';
+    font-size: 20px;
     text-align: center;
     border-left: 4px solid #54582f;
     padding-left: 10px;
     margin-left: 20px;
-    font-style: italic;
-    background-color: #eff0f0;
-    box-shadow: 1px 1px 1px #54582f;
+    color: #3b3d14;
 }
 
 .containerPresentes {
@@ -345,78 +348,91 @@ body {
 
 .listas,
 .pix {
-    background-color: #e9e9e9;
+    background-color: #eff0f0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    background: lightgrey;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
     width: 300px;
     height: 200px;
     gap: 15px;
 }
 
-
-button {
- position: relative;
- overflow: hidden;
- outline: none;
- cursor: pointer;
- border-radius: 10px;
- background-color: #bec092;
- border: solid 2px #86895d;
- font-family: inherit;
- box-shadow: 2px 2px 2px #000;
+.titleLista,
+.titlePix{
+    font-family: 'Parisienne' !important;
+    font-size: 30px;
 }
 
-.default-btn,.hover-btn {
- background-color: #bec092;
- display: -webkit-box;
- display: -moz-box;
- display: -ms-flexbox;
- display: -webkit-flex;
- display: flex;
- align-items: center;
- gap: 15px;
- padding: 15px 20px;
- border-radius: 7px;
- font-size: 17px;
- font-weight: 500;
- text-transform: uppercase;
- transition: all .3s ease;
+button {
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #bec092;
+    border: solid 2px #86895d;
+    font-family: inherit;
+    box-shadow: 2px 2px 2px #000;
+}
+
+.default-btn,
+.hover-btn {
+    background-color: #bec092;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    border-radius: 7px;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s ease;
 }
 
 .hover-btn {
- position: absolute;
- inset: 0;
- background-color: #86895d;
- transform: translate(0%,100%);
+    position: absolute;
+    inset: 0;
+    background-color: #86895d;
+    transform: translate(0%, 100%);
 }
 
 .default-btn span {
- color: #272b00;
+    color: #272b00;
 }
 
 .hover-btn span {
- color: #fff;
+    color: #fff;
 }
 
 button:hover .default-btn {
- transform: translate(0%,-100%);
+    transform: translate(0%, -100%);
 }
 
 button:hover .hover-btn {
- transform: translate(0%,0%);
+    transform: translate(0%, 0%);
 }
 
-
-
 .imgPix {
-    width: 130px;
-    height: 130px;
-    box-shadow: 4px 4px 4px #cecece;
+    width: 120px;
+    height: 120px;
+    box-shadow: 4px 4px 4px #272b00;
+    margin-bottom: 8px;
+    cursor: pointer;
+    display: block;
+}
+
+.numPix {
+    font-size: 16px !important;
+    cursor: pointer;
+    display: block;
+    color: #272b00;
+    font-weight: bold;
 }
 
 .outer {
@@ -424,7 +440,7 @@ button:hover .hover-btn {
     height: 200px;
     border-radius: 10px;
     padding: 1px;
-    background: radial-gradient(circle 230px at 0% 0%, #ffffff, #0c0d0d);
+    background: radial-gradient(circle 230px at 0% 0%, #ffffff, #bec092);
     position: relative;
 }
 
@@ -470,30 +486,15 @@ button:hover .hover-btn {
     width: 100%;
     height: 100%;
     border-radius: 9px;
-    border: solid 1px #202222;
+    border: solid 1px #bec092;
     background-size: 20px 20px;
-    background: radial-gradient(circle 280px at 0% 0%, #444444, #0c0d0d);
+    background: radial-gradient(circle 280px at 0% 0%, #bec092, #bec092);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     flex-direction: column;
     color: #fff;
-}
-
-.ray {
-    width: 220px;
-    height: 45px;
-    border-radius: 100px;
-    position: absolute;
-    background-color: #c7c7c7;
-    opacity: 0.4;
-    box-shadow: 0 0 50px #fff;
-    filter: blur(10px);
-    transform-origin: 10%;
-    top: 0%;
-    left: 0;
-    transform: rotate(40deg);
 }
 
 .card .text {
@@ -506,14 +507,14 @@ button:hover .hover-btn {
 
 .line {
     width: 100%;
-    height: 1px;
+    height: 0.5px;
     position: absolute;
-    background-color: #2c2c2c;
+    background-color: #eff0f0;
 }
 
 .topl {
     top: 10%;
-    background: linear-gradient(90deg, #888888 30%, #1d1f1f 70%);
+    background-color: #eff0f0;
 }
 
 .bottoml {
@@ -522,9 +523,9 @@ button:hover .hover-btn {
 
 .leftl {
     left: 10%;
-    width: 1px;
+    width: 0.5px;
     height: 100%;
-    background: linear-gradient(180deg, #747474 30%, #222424 70%);
+    background-color: #eff0f0;
 }
 
 .rightl {
@@ -533,6 +534,38 @@ button:hover .hover-btn {
     height: 100%;
 }
 
+.tooltip {
+    visibility: hidden;
+    width: 180px;
+    background-color: #54582f;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -90px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip.show {
+    visibility: visible;
+    opacity: 1;
+}
 
 .rodape {
     background-color: #272b00;
