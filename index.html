@@ -18,10 +18,10 @@
     <header class="fundoMenu">
         <nav>
             <ul class="menuTop">
-                <li>Home</li>
-                <li>Local & Data</li>
-                <li>Dress code</li>
-                <li>Lista de Presentes</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="#localData">Local & Data</a></li>
+                <li><a href="#dressCode">Dress code</a></li>
+                <li><a href="#presentes">Lista de Presentes</a></li>
             </ul>
         </nav>
     </header>
@@ -38,7 +38,6 @@
                 celebração de amor!
             </p>
         </div>
-
     </section>
 
     <section class="contadorDias">
@@ -87,7 +86,7 @@
         </div>
     </section>
 
-    <section class="localData">
+    <section class="localData" id="localData">
         <img src="/img/logo_oficial.png" alt="Logo Site">
 
         <div class="containerLocalData">
@@ -107,7 +106,7 @@
         </button>
     </section>
 
-    <section class="dressCode">
+    <section class="dressCode" id="dressCode">
         <div class="dress-code-card">
             <h1 class="title">Dress Code</h1>
             <div class="color-palette">
@@ -119,12 +118,12 @@
         </div>
     </section>
 
-    <section class="presentes">
+    <section class="presentes" id="presentes">
         <p class="txtPresenca">Sua presença já é nosso maior presente, mas se sentir no coração de nos abençoar...</p>
 
         <div class="containerPresentes">
             <div class="listaPresentes">
-                <span>LISTA DE PRESENTES</span>
+                <span class="titleLista">Lista de Presentes</span>
                 <div class="listas">
                     <button>
                         <div class="default-btn">
@@ -161,29 +160,30 @@
             </div>
 
             <div class="containerPix">
-                <span>PIX DOS NOIVOS</span>
+                <span class="titlePix">Pix dos Noivos</span>
                 <div class="outer">
                     <div class="dot"></div>
                     <div class="card">
-                        <div class="ray"></div>
-                        <img src="img/qrCode.png" alt="Qr Code do pix" class="imgPix">
+                        <img src="img/qrCode.png" alt="Qr Code do pix" class="imgPix" id="imgPix">
                         <div class="line topl"></div>
                         <div class="line leftl"></div>
                         <div class="line bottoml"></div>
                         <div class="line rightl"></div>
+                        <span class="numPix" id="numPix">(18)98826-9060</span>
                     </div>
+                    <div class="tooltip" id="tooltip">Chave pix copiada</div>
                 </div>
             </div>
         </div>
 
         <blockquote class="txtViverMomento">
-            "Para que todos vejam, e saibam, e considerem, e juntamente entendam que amão do Senhor fez isso..." - Isaías 41:20
+            "Para que todos vejam, e saibam, e considerem, e juntamente entendam que a mão do Senhor fez isso..." - Isaías 41:20
         </blockquote>
     </section>
 
     <footer class="rodape">
         <p>© 2025 Sidnei Dourado e Beatriz França - Todos os direitos reservados.</p>
-        <span><strong>Desenvolido por:</strong> <em>Sidnei e Beatriz</em></span>
+        <span><strong>Desenvolvido por:</strong> <em>Sidnei e Beatriz</em></span>
     </footer>
 
     <script src="js/script.js"></script>
